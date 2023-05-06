@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
   </head>
   <body>
     <!-- Navegação -->
@@ -33,7 +35,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Sobre</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobre">Sobre</a>
         </li>
 
         <li class="nav-item">
@@ -54,10 +56,11 @@
 
     <main class="card-group">
         
-            <article class="card m-3 boder-1 rounded-2">
+            <article class="card m-3 boder-1 rounded-2" onclick="selectCard('#card1')" onmouseover="highlightCard('#card1')" onmouseout="highlightCard('#card1')" id="card1">
                 <img src="assets/coffe_2.svg" alt="" 
                 height="150" 
-                class="card-img-top object-fit-md-none rounded-top">
+                class="card-img-top object-fit-md-none rounded-top image-hover" >
+                <button class="comprar-btn" style="display: none;">Comprar</button>
                 <div class="card-body">
                     <p class="card-text">Nossa loja de café se encontra em um lugar, 100% fictício, 
                         porém caso se sinta interessado pode vir tomar um café 
@@ -65,21 +68,22 @@
                 </div>
                 
             </article>
-            <article class="card m-3 boder-1 rounded-2">
+            <article class="card m-3 boder-1 rounded-2" onclick="selectCard('#card2')" onmouseover="highlightCard('#card2')" onmouseout="highlightCard('#card2')" id="card2">
                 <img src="assets/coffe_3.svg" alt="" 
                 height="150" 
-                class="card-img-top object-fit-md-none rounded-top">
+                class="card-img-top object-fit-md-none rounded-top image-hover"  >
+                <button class="comprar-btn" style="display: none;">Comprar</button>
                 <div class="card-body">
-                    <p class="card-text">Nossa loja de café se encontra em um lugar, 100% fictício, 
-                        porém caso se sinta interessado pode vir tomar um café 
-                        conosco em nossa sede em São José dos Campos.</p>
+                    <p class="card-text">Nossa casa de café é a melhor da região, aqui você tem tudo que precisa, 
+                        uma boa conversar, bons amigos e um ambiente sem igual. 
+                        Aproveite, pois Melhor que a DNC não existe!</p>
                 </div>
                 
             </article>
-            <article class="card m-3 boder-1 rounded-2">
+            <article class="card m-3 boder-1 rounded-2" onclick="selectCard('#card3')" onmouseover="highlightCard('#card3')" onmouseout="highlightCard('#card3')" id="card3">
                 <img src="assets/coffe_4.svg" alt="" 
                 height="150" 
-                class="card-img-top object-fit-md-none rounded-top">
+                class="card-img-top object-fit-md-none rounded-top image-hover"  >
                 <div class="card-body">
                     <p class="card-text">Por que a DNC? Porque podem contar sempre com um serviço genuíno,
                          uma atmosfera acolhedora e uma incrível xícara de café, 
@@ -87,10 +91,10 @@
                 </div>
                 
             </article>
-            <article class="card m-3 boder-1 rounded-2">
+            <article class="card m-3 boder-1 rounded-2" onclick="selectCard('#card4')" onmouseover="highlightCard('#card4')" onmouseout="highlightCard('#card4')" id="card4">
                 <img src="assets/coffe_5.svg" alt="" 
                 height="150" 
-                class="card-img-top object-fit-md-none rounded-top">
+                class="card-img-top object-fit-md-none rounded-top image-hover" >
                 <div class="card-body">
                     <p class="card-text">A escola especialista em formar talentos, com foco em empregabilidade,
                          migração de carreira e aumento de performance.</p>
@@ -98,8 +102,10 @@
                 
             </article>
 
-       <!-- MODAL -->
-       <div class="modal" id="myModal" tabindex="-1">
+       <!-- MODAL sobre -->
+       
+
+       <div class="modal" id="sobre" tabindex="-1">
         <div class="modal-dialog ">
           <div class="modal-content ">
             <div class="modal-header d-flex align-items-center justify-content-center text-center border-0">

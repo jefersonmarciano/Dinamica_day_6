@@ -1,3 +1,9 @@
 body{
     font-family: 'Poppins';
 }
+.card-highlight{
+    box-shadow: 10px 10px 10px 10px grey;
+  }
+  .card-selected{
+    border: 5pc solida green;
+  }
