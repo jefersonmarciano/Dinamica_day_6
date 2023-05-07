@@ -1,9 +1,18 @@
 body{
-    font-family: 'Poppins';
+  font-family: 'Poppins';
+}
+body::-webkit-scrollbar{
+display: none;
 }
 .card-highlight{
-    box-shadow: 10px 10px 10px 10px grey;
-  }
-  .card-selected{
-    border: 5pc solida green;
-  }
+  box-shadow: 10px 10px 10px 10px grey;
+}
+.card-selected{
+  border: 5pc solida green;
+}
+.comprar-btn {
+  display: none;
+}
+article.card:hover * .comprar-btn {
+  display: block;
+}

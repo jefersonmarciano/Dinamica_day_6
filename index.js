@@ -1,4 +1,4 @@
-const ingressos = []
+const cardsImg = []
 
 function addRedBorder(id){
     element = document.querySelector("#" + id);
@@ -18,6 +18,7 @@ function checkKeyboardCode(){
         alert(`Tecla pressionada ${name} \r\n Key code value: ${code}`);
     }, false);
 }
+
 
 function addKeyboardEventListeners(){
     document.addEventListener('keydown',(event)=>{
@@ -56,11 +57,11 @@ function addKeyboardEventListeners(){
 function selectCard(selector){
     var element = document.querySelector(selector)
     element.classList.toggle('card-selected')
-    if (ingressos.includes(selector)) ingressos.pop(selector);
-    else ingressos.push(selector)
+    if (cardsImg.includes(selector)) cardsImg.pop(selector);
+    else cardsImg.push(selector)
 }
 function showSelectedCard(){
-    if (ingressos.length > 0) alert ("Ingressos selecionados:" + ingressos)
+    if (cardsImg.length > 0) alert ("cardsImg selecionados:" + cardsImg)
 }
 
 addKeyboardEventListeners()
